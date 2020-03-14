@@ -1,7 +1,7 @@
 steps:
 
 - id: "Rodando Docker Compose"
-  name: 'gcr.io/cloud-builders/docker-compose'
+  name: 'gcr.io/lms-ci-test/docker-compose'
   args: ['-f', 'docker-compose.prod.yaml', 'up', '-d', '--build']
 
 - id: "Rodando Composer"
