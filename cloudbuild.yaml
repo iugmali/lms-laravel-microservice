@@ -1,0 +1,29 @@
+steps:
+
+- id: "Rodando Docker Compose"
+  name: 'gcr.io/lms-ci-test/docker-compose'
+  args: ['-f', 'docker-compose.prod.yaml', 'up', '-d', '--build']
+
+- id: "Rodando Composer"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec', '-t', 'app', 'composer', 'install']
+
+- id: "Copy env"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec', '-t', 'app', 'cp', '.env.example', '.env']
+
+- id: "Copy test env"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec', '-t', 'app', 'cp', '.env.testing.example', '.env.testing']
+
+- id: "Key Generate"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec', '-t', 'app', 'php', '/var/www/artisan', 'key:generate']
+
+- id: "Laravel - Artisan migrate"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec', '-t', 'app', 'php', '/var/www/artisan', 'migrate']
+
+- id: "Rodando phpunit"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec', '-t', 'app', 'php', '/var/www/vendor/bin/phpunit', '-c', '/var/www/phpunit.xml']

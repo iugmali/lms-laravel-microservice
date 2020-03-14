@@ -16,3 +16,10 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['namespace' => 'Api'], function() {
+    $except_create_edit = ['except' => ['create','edit']];
+    Route::resource('categories', 'CategoryController', $except_create_edit);
+    Route::resource('genres', 'GenreController', $except_create_edit);
+});
+
