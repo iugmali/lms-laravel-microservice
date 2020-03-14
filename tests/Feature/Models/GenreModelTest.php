@@ -10,7 +10,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class GenreTest extends TestCase
+class GenreModelTest extends TestCase
 {
 
     use DatabaseMigrations;

@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Models;
 
-use App\Models\Category;
+use App\Models\Genre;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Ramsey\Uuid\Uuid;
@@ -10,16 +10,16 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class CategoryTest extends TestCase
+class GenreUnitTest extends TestCase
 {
 
     use DatabaseMigrations;
-    private $category;
+    private $genre;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->category = new Category();
+        $this->genre = new Genre();
     }
 
     protected function tearDown(): void
@@ -30,35 +30,35 @@ class CategoryTest extends TestCase
     public function IfUseTraits()
     {
         $traits = [SoftDeletes::class , Uuid::class];
-        $categoryTraits = array_keys(class_uses(Category::class));
-        $this->assertEquals($traits, $categoryTraits);
+        $genreTraits = array_keys(class_uses(Genre::class));
+        $this->assertEquals($traits, $genreTraits);
     }
 
 
     public function testFillableAttribute()
     {
-        $fillable = ['name','description','is_active'];
-        $this->assertEquals($fillable, $this->category->getFillable());
+        $fillable = ['name','is_active'];
+        $this->assertEquals($fillable, $this->genre->getFillable());
     }
 
     public function testDatesAttribute()
     {
         $dates = ['created_at', 'updated_at', 'deleted_at'];
         foreach ($dates as $date) {
-            $this->assertContains($date, $this->category->getDates());
+            $this->assertContains($date, $this->genre->getDates());
         }
-        $this->assertCount(count($dates), $this->category->getDates());
+        $this->assertCount(count($dates), $this->genre->getDates());
     }
 
     public function testCasts()
     {
         $casts = ['id' => 'string', 'is_active' => 'boolean'];
-        $this->assertEquals($casts, $this->category->getCasts());
+        $this->assertEquals($casts, $this->genre->getCasts());
     }
 
     public function testIncrement()
     {
-        $this->assertFalse($this->category->incrementing);
+        $this->assertFalse($this->genre->incrementing);
     }
 
 }

@@ -10,7 +10,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class CategoryTest extends TestCase
+class CategoryModelTest extends TestCase
 {
 
     use DatabaseMigrations;
@@ -63,7 +63,6 @@ class CategoryTest extends TestCase
         $category = Category::create(['name' => 'teste', 'is_active' => false]);
         $category->delete();
         $this->assertNull(Category::find($category->id));
-
         $category->restore();
         $this->assertNotNull(Category::find($category->id));
     }

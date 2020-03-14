@@ -1,10 +1,12 @@
 <?php
 
+
 namespace App\Http\Controllers\Api;
 
-use App\Models\Category;
 
-class CategoryController extends BaseController
+use App\Models\CastMember;
+
+class CastMemberController extends BaseController
 {
     private $validation_rules = [
         'name' => 'required|max:255',
@@ -13,7 +15,7 @@ class CategoryController extends BaseController
     ];
     protected function model()
     {
-        return Category::class;
+        return CastMember::class;
     }
     protected function rulesStore()
     {
