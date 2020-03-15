@@ -76,6 +76,36 @@ class GenreControllerTest extends TestCase
             ]);
     }
 
+    public function testStore()
+    {
+        $data = [
+            'name' => 'teste'
+        ];
+        $response = $this->assertStore($data, $data + ['description' => null, 'is_active' => true, 'deleted_at' => null]);
+        $response->assertJsonStructure(['created_at', 'updated_at']);
+        $data = [
+            'name' => 'teste',
+            'description' => 'testando',
+            'is_active' => 'false'
+        ];
+        $this->assertStore($data, $data + ['description' => 'testando', 'is_active' => false]);
+    }
+
+    public function testUpdate()
+    {
+        $this->category = factory(Category::class)->create([
+            'name' => 'teste',
+            'description' => 'testando',
+            'is_active' => false
+        ]);
+        $data = [
+            'name' => 'teste',
+            'description' => '',
+            'is_active' => false
+        ];
+        $response = $this->assertUpdate($data, $data);
+    }
+
     public function testDestroy()
     {
         $genre = factory(Genre::class)->create();

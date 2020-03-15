@@ -14,7 +14,6 @@ class GenreController extends BaseController
     {
         return Genre::class;
     }
-
     protected function rulesStore()
     {
         return $this->validation_rules;
