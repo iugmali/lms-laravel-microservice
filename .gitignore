@@ -5,8 +5,6 @@
 /vendor
 /.env
 /.env.testing
-/.env.example
-/.env.testing.example
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml

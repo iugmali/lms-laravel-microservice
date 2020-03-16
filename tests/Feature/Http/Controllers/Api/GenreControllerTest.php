@@ -93,7 +93,7 @@ class GenreControllerTest extends TestCase
 
     public function testUpdate()
     {
-        $this->category = factory(Category::class)->create([
+        $this->category = factory(Genre::class)->create([
             'name' => 'teste',
             'description' => 'testando',
             'is_active' => false
