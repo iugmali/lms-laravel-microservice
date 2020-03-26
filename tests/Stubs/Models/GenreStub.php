@@ -9,7 +9,7 @@ use Illuminate\Database\Schema\Blueprint;
 class GenreStub extends Model
 {
     protected $table = 'genre_stubs';
-    protected $fillable = ['name', 'description'];
+    protected $fillable = ['name'];
 
 
     public static function createTable()
@@ -23,6 +23,6 @@ class GenreStub extends Model
 
     public static function dropTable()
     {
-        \Schema::dropIfExists('category_stubs');
+        \Schema::dropIfExists('genre_stubs');
     }
 }

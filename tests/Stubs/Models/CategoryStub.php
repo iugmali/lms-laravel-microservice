@@ -11,7 +11,6 @@ class CategoryStub extends Model
     protected $table = 'category_stubs';
     protected $fillable = ['name', 'description'];
 
-
     public static function createTable()
     {
         \Schema::create('category_stubs', function (Blueprint $table) {

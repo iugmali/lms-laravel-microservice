@@ -5,19 +5,17 @@ namespace Tests\Stubs\Controllers;
 
 
 use App\Http\Controllers\Api\BaseController;
-use Tests\Stubs\Models\CategoryStub;
+use Tests\Stubs\Models\GenreStub;
 
-class CategoryControllerStub extends BaseController
+class GenreControllerStub extends BaseController
 {
 
     private $validation_rules = [
-        'name' => 'required|max:255',
-        'description' => 'nullable',
-        'is_active' => 'boolean'
+        'name' => 'required|max:255'
     ];
     protected function model()
     {
-        return CategoryStub::class;
+        return GenreStub::class;
     }
     protected function rulesStore()
     {

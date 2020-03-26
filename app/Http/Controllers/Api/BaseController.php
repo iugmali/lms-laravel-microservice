@@ -24,13 +24,6 @@ abstract class BaseController extends Controller
         return $obj;
     }
 
-    protected function findOrfail($id)
-    {
-        $model = $this->model();
-        $keyName = (new $model)->getRouteKeyName();
-        return $this->model()::where($keyName, $id)->firstOrFail();
-    }
-
     public function show($id)
     {
         $obj = $this->findOrfail($id);
@@ -50,6 +43,13 @@ abstract class BaseController extends Controller
         $obj = $this->findOrfail($id);
         $obj->delete();
         return response()->noContent(); // 204
+    }
+
+    protected function findOrfail($id)
+    {
+        $model = $this->model();
+        $keyName = (new $model)->getRouteKeyName();
+        return $this->model()::where($keyName, $id)->firstOrFail();
     }
 
 }
