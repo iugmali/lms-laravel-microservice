@@ -20,7 +20,7 @@ trait TestSaves
             throw new \Exception("Response status must be 201, given {$response->status()}:\n{$response->content()}");
         }
         $this->assertInDatabase($response, $testDatabase);
-        $this->assertJsonResponseContent($response, $testDatabase, $testJsonData = null);
+        $this->assertJsonResponseContent($response, $testDatabase, $testJsonData);
         return $response;
     }
 
@@ -32,7 +32,7 @@ trait TestSaves
             throw new \Exception("Response status must be 200, given {$response->status()}:\n{$response->content()}");
         }
         $this->assertInDatabase($response, $testDatabase);
-        $this->assertJsonResponseContent($response, $testDatabase, $testJsonData = null);
+        $this->assertJsonResponseContent($response, $testDatabase, $testJsonData);
         return $response;
     }
 

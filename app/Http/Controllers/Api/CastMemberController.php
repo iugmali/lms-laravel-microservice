@@ -8,11 +8,15 @@ use App\Models\CastMember;
 
 class CastMemberController extends BaseController
 {
-    private $validation_rules = [
-        'name' => 'required|max:255',
-        'description' => 'nullable',
-        'is_active' => 'boolean'
-    ];
+    private $validation_rules;
+
+    public function __construct()
+    {
+        $this->validation_rules = [
+            'name' => 'required|max:255',
+            'type' => 'required|in:' . implode(',',[CastMember::TYPE_DIRECTOR,CastMember::TYPE_ACTOR])
+        ];
+    }
     protected function model()
     {
         return CastMember::class;

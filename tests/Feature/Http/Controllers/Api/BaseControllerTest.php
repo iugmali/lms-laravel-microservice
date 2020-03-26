@@ -12,7 +12,7 @@ use Tests\Stubs\Models\CategoryStub;
 use Tests\TestCase;
 
 
-class BaseControllerTest extends TestCase
+abstract class BaseControllerTest extends TestCase
 {
     private $controller;
 

@@ -12,7 +12,8 @@ trait TestValidations
     protected abstract function routeStore();
     protected abstract function routeUpdate();
 
-    protected function assertInvalidStoreAction(
+    protected function
+    assertInvalidStoreAction(
         array $data,
         string $rule,
         $ruleParams = []
@@ -26,7 +27,7 @@ trait TestValidations
         string $rule,
         $ruleParams = []
     ){
-        $response = $this->json('PUT', $this->routeUpdate($id), $data);
+        $response = $this->json('PUT', $this->routeUpdate(), $data);
         $this->assertInvalidFields($response, array_keys($data), $rule, $ruleParams);
     }
 

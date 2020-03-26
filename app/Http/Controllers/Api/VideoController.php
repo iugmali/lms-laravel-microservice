@@ -8,11 +8,17 @@ use App\Models\Video;
 
 class VideoController extends BaseController
 {
-    private $validation_rules = [
-        'name' => 'required|max:255',
-        'description' => 'required',
-        'is_active' => 'boolean'
-    ];
+    private $validation_rules;
+
+    public function __construct()
+    {
+        $this->validation_rules = [
+            'title' => 'required|max:255',
+            'description' => 'required',
+            'opened' => 'boolean',
+            'year_launched' => 'required'
+        ];
+    }
     protected function model()
     {
         return Video::class;
