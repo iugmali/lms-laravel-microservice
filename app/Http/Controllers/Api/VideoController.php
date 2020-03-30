@@ -21,8 +21,8 @@ class VideoController extends BaseController
             'opened' => 'boolean',
             'year_launched' => 'required|date_format:Y',
             'duration' => 'required|integer',
-            'categories_id' => 'required|array|exists:categories,id',
-            'genres_id' => 'required|array|exists:genres,id'
+            'categories_id' => 'required|array|exists:categories,id,deleted_at,NULL',
+            'genres_id' => 'required|array|exists:genres,id,deleted_at,NULL'
         ];
     }
 
