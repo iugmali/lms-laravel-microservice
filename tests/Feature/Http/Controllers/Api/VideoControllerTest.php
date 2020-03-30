@@ -3,13 +3,10 @@
 
 namespace Tests\Feature\Http\Controllers\Api;
 
-use App\Http\Controllers\Api\VideoController;
 use App\Models\Category;
 use App\Models\Genre;
 use App\Models\Video;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Http\Request;
-use Tests\Exceptions\TestException;
 use Tests\TestCase;
 use Tests\Traits\TestSaves;
 use Tests\Traits\TestValidations;
@@ -112,38 +109,6 @@ class VideoControllerTest extends TestCase
         }
     }
 
-    public function testRollbackStore()
-    {
-        $controller = \Mockery::mock(VideoController::class)
-            ->makePartial()
-            ->shouldAllowMockingProtectedMethods();
-        $controller
-            ->shouldReceive('addRuleIfGenreHasCategories')
-            ->withAnyArgs()
-            ->andReturnNull();
-        $controller
-            ->shouldReceive('validate')
-            ->withAnyArgs()
-            ->andReturn($this->sendData);
-        $controller
-            ->shouldReceive('rulesStore')
-            ->withAnyArgs()
-            ->andReturn([]);
-        $request = \Mockery::mock(Request::class);
-        $controller
-            ->shouldReceive('handleRelations')
-            ->once()
-            ->andThrow(new TestException());
-        $has_error = false;
-        try {
-            $controller->store($request);
-        } catch (\Exception $exception) {
-            $this->assertCount(1, Video::all());
-            $has_error = true;
-        }
-        $this->assertTrue($has_error);
-    }
-
     public function testUpdate()
     {
         $category = factory(Category::class)->create();
@@ -163,42 +128,6 @@ class VideoControllerTest extends TestCase
         $response = $this->assertUpdate($data_sent, $data);
         $this->assertHasCategory($response->json('id'), $category->id);
         $this->assertHasGenre($response->json('id'), $genre->id);
-    }
-
-    public function testRollbackUpdate()
-    {
-        $controller = \Mockery::mock(VideoController::class)
-            ->makePartial()
-            ->shouldAllowMockingProtectedMethods();
-        $controller
-            ->shouldReceive('findOrFail')
-            ->withAnyArgs()
-            ->andReturn($this->video);
-        $controller
-            ->shouldReceive('addRuleIfGenreHasCategories')
-            ->withAnyArgs()
-            ->andReturnNull();
-        $controller
-            ->shouldReceive('validate')
-            ->withAnyArgs()
-            ->andReturn($this->sendData);
-        $controller
-            ->shouldReceive('rulesUpdate')
-            ->withAnyArgs()
-            ->andReturn([]);
-        $request = \Mockery::mock(Request::class);
-        $controller
-            ->shouldReceive('handleRelations')
-            ->once()
-            ->andThrow(new TestException());
-        $has_error = false;
-        try {
-            $controller->update($request, $this->video->id);
-        } catch (\Exception $exception) {
-            $this->assertCount(1, Video::all());
-            $has_error = true;
-        }
-        $this->assertTrue($has_error);
     }
 
     public function testSyncCategoriesGenres()
