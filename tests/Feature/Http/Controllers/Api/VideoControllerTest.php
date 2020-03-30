@@ -66,8 +66,10 @@ class VideoControllerTest extends TestCase
         $this->assertInvalidData(['opened' => 'a'], 'boolean');
         $this->assertInvalidData(['duration' => 'a'], 'integer');
         $this->assertInvalidData(['rating' => 0], 'in');
-        $this->assertInvalidData(['categories_id' => 'test', 'genres_id' => 'test'], 'array');
-        $this->assertInvalidData(['categories_id' => [12], 'genres_id' => [12]], 'exists');
+        $this->assertInvalidData(['genres_id' => 'test'], 'array');
+        $this->assertInvalidData(['categories_id' => 'test'], 'array');
+        $this->assertInvalidData(['categories_id' => [12]], 'exists');
+        $this->assertInvalidData(['genres_id' => [12]], 'exists');
         $category = factory(Category::class)->create();
         $genre = factory(Genre::class)->create();
         $category->delete();
@@ -115,6 +117,10 @@ class VideoControllerTest extends TestCase
         $controller = \Mockery::mock(VideoController::class)
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
+        $controller
+            ->shouldReceive('addRuleIfGenreHasCategories')
+            ->withAnyArgs()
+            ->andReturnNull();
         $controller
             ->shouldReceive('validate')
             ->withAnyArgs()
@@ -168,6 +174,10 @@ class VideoControllerTest extends TestCase
             ->shouldReceive('findOrFail')
             ->withAnyArgs()
             ->andReturn($this->video);
+        $controller
+            ->shouldReceive('addRuleIfGenreHasCategories')
+            ->withAnyArgs()
+            ->andReturnNull();
         $controller
             ->shouldReceive('validate')
             ->withAnyArgs()
