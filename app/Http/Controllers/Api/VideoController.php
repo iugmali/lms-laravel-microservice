@@ -26,7 +26,8 @@ class VideoController extends BaseController
                 'required',
                 'array',
                 'exists:genres,id,deleted_at,NULL'
-            ]
+            ],
+            'video_file' => 'required'
         ];
     }
 
