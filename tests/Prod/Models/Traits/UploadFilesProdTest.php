@@ -6,16 +6,18 @@ namespace Tests\Prod\Models\Traits;
 use Illuminate\Http\UploadedFile;
 use Tests\Stubs\Models\UploadFilesStub;
 use Tests\TestCase;
+use Tests\Traits\TestProd;
 use Tests\Traits\TestStorages;
 
-class UploadFilesUnitTest extends TestCase
+class UploadFilesProdTest extends TestCase
 {
-    use TestStorages;
+    use TestStorages, TestProd;
     private $obj;
 
     protected function setUp() : void
     {
         parent::setUp();
+        $this->skipTestIfProd("Teste de production ignorados");
         $this->obj = new UploadFilesStub();
         \Config::set('filesystems.default', 'gcs');
         $this->deleteAllFiles();
