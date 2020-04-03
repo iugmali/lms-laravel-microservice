@@ -25,7 +25,7 @@ class GenreUnitTest extends TestCase
         parent::tearDown();
     }
 
-    public function IfUseTraits()
+    public function testIfUseTraits()
     {
         $traits = [SoftDeletes::class , Uuid::class];
         $genreTraits = array_keys(class_uses(Genre::class));
