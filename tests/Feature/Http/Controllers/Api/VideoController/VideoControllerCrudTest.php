@@ -64,16 +64,6 @@ class VideoControllerCrudTest extends BaseVideoControllerTestCase
         $this->assertInvalidUpdateAction($data, $rule, $rules_param);
     }
 
-    public function testInvalidationVideoField()
-    {
-        $this->assertInvalidationFile(
-            'video_file',
-            'mp4',
-            12,
-            'mimetypes', ['values' => 'video/mp4']
-        );
-    }
-
     public function testSaveWithoutFiles()
     {
         $category = factory(Category::class)->create();
