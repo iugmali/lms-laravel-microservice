@@ -5,7 +5,7 @@ steps:
   args:
       - kms
       - decrypt
-      - --cyphertext-file=./storage/credentials/google/storage-admin.json.enc
+      - --ciphertext-file=./storage/credentials/google/storage-admin.json.enc
       - --plaintext-file=./storage/credentials/google/serv-storage-admin.json
       - --location=global
       - --keyring=lms-storage
