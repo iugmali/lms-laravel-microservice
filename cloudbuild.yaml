@@ -1,8 +1,25 @@
 steps:
 
+- id: "Gerando service key"
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+      - kms
+      - decrypt
+      - --cyphertext-file=./storage/credentials/google/storage-admin.json.enc
+      - --plaintext-file=./storage/credentials/google/serv-storage-admin.json
+      - --location=global
+      - --keyring=lms-storage
+      - --key=lms-service-account
+
 - id: "Rodando Docker Compose"
-  name: 'gcr.io/lms-ci-test/docker-compose'
+  name: 'gcr.io/$PROJECT_ID/docker-compose'
   args: ['-f', 'docker-compose.prod.yaml', 'up', '-d', '--build']
+  env:
+      - GOOGLE_CLOUD_PROJECT_ID=lms-ci-test
+      - GOOGLE_CLOUD_STORAGE_BUCKET=lms-code-micro-videos
+      - GOOGLE_CLOUD_KEY_FILE=serv-storage-admin.json
+      - GOOGLE_CLOUD_STORAGE_API_URI=https://console.cloud.google.com/storage/browser/lms-code-micro-videos
+      - TESTING_PRODD=true
 
 - id: "Rodando Composer"
   name: 'gcr.io/cloud-builders/docker'
