@@ -1,38 +1,19 @@
 <?php
 
 
-namespace Tests\Feature\Http\Controllers\Api;
+namespace Tests\Feature\Http\Controllers\Api\VideoController;
 
-use App\Http\Controllers\Api\VideoController;
 use App\Models\Category;
 use App\Models\Genre;
 use App\Models\Video;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Http\Request;
-use Tests\Exceptions\TestException;
-use Tests\TestCase;
+use Illuminate\Http\UploadedFile;
+use Tests\Feature\Http\Controllers\Api\VideoController\BaseVideoControllerTestCase;
 use Tests\Traits\TestSaves;
 use Tests\Traits\TestValidations;
 
-class VideoControllerTest extends TestCase
+class VideoControllerCrudTest extends BaseVideoControllerTestCase
 {
-    use DatabaseMigrations, TestValidations, TestSaves;
-
-    private $video;
-    private $sendData;
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-        $this->video = factory(Video::class)->create();
-        $this->sendData = [
-            'title' => 'teste',
-            'description' => str_repeat('a', 400),
-            'year_launched' => 2000,
-            'rating' => '12',
-            'duration' => 60
-        ];
-    }
+    use TestValidations, TestSaves;
 
     public function testIndex()
     {
@@ -66,8 +47,10 @@ class VideoControllerTest extends TestCase
         $this->assertInvalidData(['opened' => 'a'], 'boolean');
         $this->assertInvalidData(['duration' => 'a'], 'integer');
         $this->assertInvalidData(['rating' => 0], 'in');
-        $this->assertInvalidData(['categories_id' => 'test', 'genres_id' => 'test'], 'array');
-        $this->assertInvalidData(['categories_id' => [12], 'genres_id' => [12]], 'exists');
+        $this->assertInvalidData(['genres_id' => 'test'], 'array');
+        $this->assertInvalidData(['categories_id' => 'test'], 'array');
+        $this->assertInvalidData(['categories_id' => [12]], 'exists');
+        $this->assertInvalidData(['genres_id' => [12]], 'exists');
         $category = factory(Category::class)->create();
         $genre = factory(Genre::class)->create();
         $category->delete();
@@ -79,6 +62,58 @@ class VideoControllerTest extends TestCase
     {
         $this->assertInvalidStoreAction($data, $rule, $rules_param);
         $this->assertInvalidUpdateAction($data, $rule, $rules_param);
+    }
+
+    public function testInvalidationVideoField()
+    {
+        $this->assertInvalidationFile(
+            'video_file',
+            'mp4',
+            12,
+            'mimetypes', ['values' => 'video/mp4']
+        );
+    }
+
+    public function testSaveWithoutFiles()
+    {
+        $category = factory(Category::class)->create();
+        $genre = factory(Genre::class)->create();
+        $genre->categories()->sync($category->id);
+        $data = [
+            [
+            'send_data' => $this->sendData + [
+                    'categories_id' => [$category->id],
+                    'genres_id' => [$genre->id]
+                ],
+            'test_data' => $this->sendData + ['opened' => false]
+            ],
+            [
+            'send_data' => $this->sendData + [
+                    'opened' => true,
+                    'categories_id' => [$category->id],
+                    'genres_id' => [$genre->id]
+                ],
+            'test_data' => $this->sendData + ['opened' => true]
+            ],
+            [
+            'send_data' => $this->sendData + [
+                    'rating' => Video::RATING_LIST[2],
+                    'categories_id' => [$category->id],
+                    'genres_id' => [$genre->id]
+                ],
+            'test_data' => $this->sendData + ['rating' => Video::RATING_LIST[2]]
+            ]
+        ];
+        foreach ($data as $key => $value) {
+            $response = $this->assertStore($value['send_data'], $value['test_data'] + ['deleted_at' => null]);
+            $response->assertJsonStructure(['created_at', 'updated_at']);
+            $this->assertHasCategory($response->json('id'), $value['send_data']['categories_id'][0]);
+            $this->assertHasGenre($response->json('id'), $value['send_data']['genres_id'][0]);
+            $response = $this->assertUpdate($value['send_data'], $value['test_data'] + ['deleted_at' => null]);
+            $response->assertJsonStructure(['created_at', 'updated_at']);
+            $this->assertHasCategory($response->json('id'), $value['send_data']['categories_id'][0]);
+            $this->assertHasGenre($response->json('id'), $value['send_data']['genres_id'][0]);
+        }
     }
 
     public function testStore()
@@ -110,34 +145,6 @@ class VideoControllerTest extends TestCase
         }
     }
 
-    public function testRollbackStore()
-    {
-        $controller = \Mockery::mock(VideoController::class)
-            ->makePartial()
-            ->shouldAllowMockingProtectedMethods();
-        $controller
-            ->shouldReceive('validate')
-            ->withAnyArgs()
-            ->andReturn($this->sendData);
-        $controller
-            ->shouldReceive('rulesStore')
-            ->withAnyArgs()
-            ->andReturn([]);
-        $request = \Mockery::mock(Request::class);
-        $controller
-            ->shouldReceive('handleRelations')
-            ->once()
-            ->andThrow(new TestException());
-        $has_error = false;
-        try {
-            $controller->store($request);
-        } catch (\Exception $exception) {
-            $this->assertCount(1, Video::all());
-            $has_error = true;
-        }
-        $this->assertTrue($has_error);
-    }
-
     public function testUpdate()
     {
         $category = factory(Category::class)->create();
@@ -155,40 +162,9 @@ class VideoControllerTest extends TestCase
                 'genres_id' => [$genre->id]
         ];
         $response = $this->assertUpdate($data_sent, $data);
+        $response->assertJsonStructure(['created_at', 'updated_at']);
         $this->assertHasCategory($response->json('id'), $category->id);
         $this->assertHasGenre($response->json('id'), $genre->id);
-    }
-
-    public function testRollbackUpdate()
-    {
-        $controller = \Mockery::mock(VideoController::class)
-            ->makePartial()
-            ->shouldAllowMockingProtectedMethods();
-        $controller
-            ->shouldReceive('findOrFail')
-            ->withAnyArgs()
-            ->andReturn($this->video);
-        $controller
-            ->shouldReceive('validate')
-            ->withAnyArgs()
-            ->andReturn($this->sendData);
-        $controller
-            ->shouldReceive('rulesUpdate')
-            ->withAnyArgs()
-            ->andReturn([]);
-        $request = \Mockery::mock(Request::class);
-        $controller
-            ->shouldReceive('handleRelations')
-            ->once()
-            ->andThrow(new TestException());
-        $has_error = false;
-        try {
-            $controller->update($request, $this->video->id);
-        } catch (\Exception $exception) {
-            $this->assertCount(1, Video::all());
-            $has_error = true;
-        }
-        $this->assertTrue($has_error);
     }
 
     public function testSyncCategoriesGenres()
@@ -232,7 +208,7 @@ class VideoControllerTest extends TestCase
         $this->assertHasGenre($response->json('id'), $genresId[2]);
     }
 
-    public function assertHasCategory($videoId, $categoryId)
+    private function assertHasCategory($videoId, $categoryId)
     {
         $this->assertDatabaseHas('category_video', [
             'video_id' => $videoId,
@@ -240,7 +216,7 @@ class VideoControllerTest extends TestCase
         ]);
     }
 
-    public function assertHasGenre($videoId, $genreId)
+    private function assertHasGenre($videoId, $genreId)
     {
         $this->assertDatabaseHas('genre_video', [
             'video_id' => $videoId,
