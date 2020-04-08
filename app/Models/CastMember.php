@@ -20,4 +20,9 @@ class CastMember extends Model
         'type' => 'integer'
     ];
     public $incrementing = false;
+
+    public function castMembers()
+    {
+        return $this->belongsToMany(Video::class)->withTrashed();
+    }
 }

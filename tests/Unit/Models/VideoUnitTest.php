@@ -35,8 +35,8 @@ class VideoUnitTest extends TestCase
 
     public function testFillableAttribute()
     {
-        $fillable = ['title','description','year_launched','opened','rating','duration','video_file', 'thumb_file'];
-        $this->assertEquals($fillable, $this->video->getFillable());
+        $fillable = ['title','description','year_launched','opened','rating','duration','video_file','thumb_file','trailer_file','banner_file'];
+        $this->assertEqualsCanonicalizing($fillable, $this->video->getFillable());
     }
 
     public function testDatesAttribute()
@@ -61,8 +61,8 @@ class VideoUnitTest extends TestCase
 
     public function testFileFields()
     {
-        $fileFields = ['video_file', 'thumb_file'];
-        $this->assertEquals($fileFields, $this->video::$fileFields);
+        $fileFields = ['video_file', 'thumb_file', 'trailer_file', 'banner_file'];
+        $this->assertEqualsCanonicalizing($fileFields, $this->video::$fileFields);
     }
 
     public function testIncrement()

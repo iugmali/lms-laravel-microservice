@@ -6,6 +6,7 @@ namespace Tests\Stubs\Controllers;
 
 use App\Http\Controllers\Api\BaseController;
 use Tests\Stubs\Models\CategoryStub;
+use Tests\Stubs\Resources\CategoryResourceStub;
 
 class CategoryControllerStub extends BaseController
 {
@@ -27,5 +28,12 @@ class CategoryControllerStub extends BaseController
     {
         return $this->validation_rules;
     }
-
+    protected function resource()
+    {
+        return CategoryResourceStub::class;
+    }
+    protected function resourceCollection()
+    {
+        return $this->resource();
+    }
 }

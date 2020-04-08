@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 use App\Models\Genre;
 use Illuminate\Http\Request;
@@ -14,6 +15,7 @@ class CategoryController extends BaseController
         'is_active' => 'boolean',
         'genres_id' => 'required|array|exists:genres,id,deleted_at,NULL'
     ];
+
     public function store(Request $request)
     {
         $validatedData = $this->validate($request, $this->rulesStore());
@@ -25,8 +27,10 @@ class CategoryController extends BaseController
             return $obj;
         });
         $obj->refresh();
-        return $obj;
+        $resource = $this->resource();
+        return new $resource($obj);
     }
+
     public function update(Request $request, $id)
     {
         $obj = $this->findOrfail($id);
@@ -37,8 +41,10 @@ class CategoryController extends BaseController
             $self->handleRelations($obj, $request);
             return $obj;
         });
-        return $obj;
+        $resource = $this->resource();
+        return new $resource($obj);
     }
+
     protected function handleRelations($category, Request $request){
         $category->genres()->sync($request->get('genres_id'));
     }
@@ -54,5 +60,13 @@ class CategoryController extends BaseController
     protected function rulesUpdate()
     {
         return $this->validation_rules;
+    }
+    protected function resourceCollection()
+    {
+        return $this->resource();
+    }
+    protected function resource()
+    {
+        return CategoryResource::class;
     }
 }

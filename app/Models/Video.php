@@ -6,7 +6,6 @@ namespace App\Models;
 use App\Models\Traits\UploadFiles;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use test\Mockery\MagicParams;
 
 class Video extends Model
 {
@@ -103,6 +102,10 @@ class Video extends Model
     public function genres()
     {
         return $this->belongsToMany(Genre::class)->withTrashed();
+    }
+    public function castMembers()
+    {
+        return $this->belongsToMany(CastMember::class)->withTrashed();
     }
     protected function uploadDir()
     {

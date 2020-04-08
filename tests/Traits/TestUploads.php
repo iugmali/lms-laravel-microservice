@@ -3,9 +3,6 @@
 
 namespace Tests\Traits;
 
-
-use App\Models\Category;
-use App\Models\Genre;
 use App\Models\Traits\UploadFiles;
 use Illuminate\Http\UploadedFile;
 
@@ -25,14 +22,14 @@ trait TestUploads
         ];
         foreach ($routes as $route) {
             $file = UploadedFile::fake()->create("$field.1$extension");
-            $response = $this->json($route['method'], $route['route'], [
+            $response = $this->json($route['method'], $route['route'],
                 $this->sendData + [$field => $file]
-            ]);
+            );
             $this->assertInvalidFields($response, [$field], $rule, $ruleParams);
             $file = UploadedFile::fake()->create("$field.$extension")->size($maxSize + 1);
-            $response = $this->json($route['method'], $route['route'], [
+            $response = $this->json($route['method'], $route['route'],
                 $this->sendData + [$field => $file]
-            ]);
+            );
             $this->assertInvalidFields($response, [$field], 'max.file', ['max' => $maxSize]);
         }
     }

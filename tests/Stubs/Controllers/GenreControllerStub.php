@@ -25,5 +25,12 @@ class GenreControllerStub extends BaseController
     {
         return $this->validation_rules;
     }
-
+    protected function resource()
+    {
+        return GenreControllerStub::class;
+    }
+    protected function resourceCollection()
+    {
+        return $this->resource();
+    }
 }

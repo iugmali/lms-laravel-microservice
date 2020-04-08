@@ -3,18 +3,21 @@
 
 namespace Tests\Feature\Http\Controllers\Api\VideoController;
 
+use App\Http\Resources\VideoResource;
 use App\Models\Category;
 use App\Models\Genre;
 use App\Models\Video;
 use Illuminate\Foundation\Testing\TestResponse;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Arr;
+use Tests\Traits\TestResources;
+use Tests\Traits\TestSaves;
 use Tests\Traits\TestUploads;
 use Tests\Traits\TestValidations;
 
 class VideoControllerUploadsTest extends BaseVideoControllerTestCase
 {
-    use TestValidations, TestUploads;
+    use TestValidations, TestSaves, TestUploads, TestResources;
 
     public function testInvalidationVideoField()
     {
@@ -63,6 +66,8 @@ class VideoControllerUploadsTest extends BaseVideoControllerTestCase
             $this->sendData + $files);
         $response->assertStatus(201);
         $this->assertFilesOnPersist($response, $files);
+        $resource = new VideoResource(Video::find($this->getIdFromResponse($response)));
+        $this->assertResource($response, $resource);
     }
 
     public function testUpdateWithFiles()
@@ -75,18 +80,24 @@ class VideoControllerUploadsTest extends BaseVideoControllerTestCase
             $this->sendData + $files);
         $response->assertStatus(200);
         $this->assertFilesOnPersist($response, $files);
+        $resource = new VideoResource(Video::find($this->getIdFromResponse($response)));
+        $this->assertResource($response, $resource);
 
         $newFiles = [
             'thumb_file' => UploadedFile::fake()->image('thumb_file.jpg'),
-            'video_file' => UploadedFile::fake()->image('video_file.mp4')
+            'video_file' => UploadedFile::fake()->create('video_file.mp4'),
+            'trailer_file' => UploadedFile::fake()->create('trailer_file.mp4'),
+            'banner_file' => UploadedFile::fake()->image('banner_file.jpg'),
         ];
         $response = $this->json(
             'PUT',
             $this->routeUpdate(),
             $this->sendData + $newFiles);
         $response->assertStatus(200);
-        $this->assertFilesOnPersist($response, Arr::except($files, ['thumb_file', 'video_file']) + $newFiles);
-        $id = $response->json('id');
+        $this->assertFilesOnPersist($response, Arr::except($files, ['thumb_file', 'video_file','trailer_file','banner_file']) + $newFiles);
+        $resource = new VideoResource(Video::find($this->getIdFromResponse($response)));
+        $this->assertResource($response, $resource);
+        $id = $this->getIdFromResponse($response);
         $video = Video::find($id);
         \Storage::assertMissing($video->relativeFilePath($files['thumb_file']->hashName()));
         \Storage::assertMissing($video->relativeFilePath($files['video_file']->hashName()));
@@ -94,7 +105,7 @@ class VideoControllerUploadsTest extends BaseVideoControllerTestCase
 
     protected function assertFilesOnPersist(TestResponse $response, $files)
     {
-        $id = $response->json('id');
+        $id = $this->getIdFromResponse($response);
         $video = Video::find($id);
         $this->assertFilesExistsInStorage($video, $files);
     }
