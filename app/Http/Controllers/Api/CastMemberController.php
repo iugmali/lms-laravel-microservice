@@ -4,6 +4,7 @@
 namespace App\Http\Controllers\Api;
 
 
+use App\Http\Resources\CastMemberResource;
 use App\Models\CastMember;
 
 class CastMemberController extends BaseController
@@ -28,5 +29,13 @@ class CastMemberController extends BaseController
     protected function rulesUpdate()
     {
         return $this->validation_rules;
+    }
+    protected function resourceCollection()
+    {
+        return $this->resource();
+    }
+    protected function resource()
+    {
+        return CastMemberResource::class;
     }
 }

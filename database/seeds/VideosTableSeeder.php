@@ -24,7 +24,7 @@ class VideosTableSeeder extends Seeder
         $self = $this;
         $this->allGenres = Genre::all();
         Model::reguard(); // ativa mass assigment
-        factory(Video::class, 100)
+        factory(Video::class, 5)
             ->make()
             ->each(function (Video $video) use($self) {
                 $self->fetchRelations();

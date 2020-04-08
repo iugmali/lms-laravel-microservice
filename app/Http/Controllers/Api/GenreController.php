@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\GenreResource;
 use App\Models\Genre;
 use App\Models\Video;
 use Illuminate\Http\Request;
@@ -25,8 +26,10 @@ class GenreController extends BaseController
             return $obj;
         });
         $obj->refresh();
-        return $obj;
+        $resource = $this->resource();
+        return new $resource($obj);
     }
+
     public function update(Request $request, $id)
     {
         $obj = $this->findOrfail($id);
@@ -37,21 +40,36 @@ class GenreController extends BaseController
             $self->handleRelations($obj, $request);
             return $obj;
         });
-        return $obj;
+        $resource = $this->resource();
+        return new $resource($obj);
     }
+
     protected function handleRelations($genre, Request $request){
         $genre->categories()->sync($request->get('categories_id'));
     }
+
     protected function model()
     {
         return Genre::class;
     }
+
     protected function rulesStore()
     {
         return $this->validation_rules;
     }
+
     protected function rulesUpdate()
     {
         return $this->validation_rules;
+    }
+
+    protected function resourceCollection()
+    {
+        return $this->resource();
+    }
+
+    protected function resource()
+    {
+        return GenreResource::class;
     }
 }
