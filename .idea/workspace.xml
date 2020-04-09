@@ -2,166 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="825cfca8-3c67-4180-8fcc-a3e253a01032" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.docker/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/nginx/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.testing.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/BaseController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CastMemberController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/GenreController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/VideoController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CastMemberResource.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CategoryResource.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/GenreResource.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/VideoResource.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/CastMember.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Genre.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Traits/UploadFiles.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Traits/Uuid.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Video.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/GenresHasCategoriesRule.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/hashing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/CastMemberFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/CategoryFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/GenreFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/VideoFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_23_204213_create_categories_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_24_054249_create_genres_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_26_213658_create_cast_members_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_26_214623_create_videos_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_26_185625_create_category_video_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_26_190020_create_genre_video_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_28_051405_create_category_genre_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CastMembersTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CategoriesTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/GenresTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/VideosTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/credentials/google/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/credentials/google/storage-admin.json.enc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Bootstrap.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Exceptions/TestException.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/BaseControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/CastMemberControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/CategoryControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/GenreControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoController/BaseVideoControllerTestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoController/VideoControllerCrudTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoController/VideoControllerUploadsTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/CastMemberModelTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/CategoryModelTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/GenreModelTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/Traits/UploadFilesTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/Video/BaseVideoTestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/Video/VideoCrudTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/Video/VideoUploadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Rules/GenresHasCategoriesRuleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Prod/Models/Traits/UploadFilesProdTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Stubs/Controllers/CategoryControllerStub.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Stubs/Controllers/GenreControllerStub.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Stubs/Models/CategoryStub.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Stubs/Models/GenreStub.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Stubs/Models/UploadFilesStub.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Stubs/Resources/CategoryResourceStub.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Stubs/Resources/GenreResourceStub.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Traits/TestProd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Traits/TestResources.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Traits/TestSaves.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Traits/TestStorages.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Traits/TestUploads.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Traits/TestValidations.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/CastMemberUnitTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/CategoryUnitTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/GenreUnitTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/Traits/UploadFilesUnitTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/VideoUnitTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Rules/GenresHasCategoriesRuleUnitTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -347,9 +189,9 @@
       <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Unit\Models" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.TestException.php">
-    <configuration name="BaseControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Http\Controllers\Api\BaseControllerTest" configuration_file="/opt/project/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/BaseControllerTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.BaseControllerTest (1)">
+    <configuration name="BaseControllerTest (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Api\BaseControllerTest" configuration_file="/opt/project/backend/phpunit.xml" file="$PROJECT_DIR$/backend/tests/Feature/Http/Controllers/Api/BaseControllerTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="VideoControllerCrudTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -373,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.BaseControllerTest (1)" />
         <item itemvalue="PHP Script.TestException.php" />
         <item itemvalue="PHPUnit.VideoControllerUploadsTest" />
         <item itemvalue="PHPUnit.VideoControllerCrudTest" />
         <item itemvalue="PHPUnit.VideoControllerCrudTest.testIndex" />
-        <item itemvalue="PHPUnit.BaseControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -468,7 +310,7 @@
       <workItem from="1586279254758" duration="743000" />
       <workItem from="1586295669531" duration="18771000" />
       <workItem from="1586368182171" duration="1356000" />
-      <workItem from="1586403282436" duration="5394000" />
+      <workItem from="1586403282436" duration="5705000" />
     </task>
     <servers />
   </component>
@@ -537,22 +379,22 @@
     </state>
     <state x="-1500" y="-97" key="FileChooserDialogImpl/0.0.1298.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1581701350247" />
     <state x="-1500" y="-97" key="FileChooserDialogImpl/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586368246699" />
-    <state width="1280" height="397" key="GridCell.Tab.0.bottom" timestamp="1586408790369">
+    <state width="1280" height="397" key="GridCell.Tab.0.bottom" timestamp="1586408904872">
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
-    <state width="1280" height="397" key="GridCell.Tab.0.bottom/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408790369" />
-    <state width="1280" height="397" key="GridCell.Tab.0.center" timestamp="1586408790369">
+    <state width="1280" height="397" key="GridCell.Tab.0.bottom/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408904872" />
+    <state width="1280" height="397" key="GridCell.Tab.0.center" timestamp="1586408904872">
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
-    <state width="1280" height="397" key="GridCell.Tab.0.center/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408790369" />
-    <state width="1280" height="397" key="GridCell.Tab.0.left" timestamp="1586408790369">
+    <state width="1280" height="397" key="GridCell.Tab.0.center/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408904872" />
+    <state width="1280" height="397" key="GridCell.Tab.0.left" timestamp="1586408904872">
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
-    <state width="1280" height="397" key="GridCell.Tab.0.left/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408790369" />
-    <state width="1280" height="397" key="GridCell.Tab.0.right" timestamp="1586408790369">
+    <state width="1280" height="397" key="GridCell.Tab.0.left/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408904872" />
+    <state width="1280" height="397" key="GridCell.Tab.0.right" timestamp="1586408904872">
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
-    <state width="1280" height="397" key="GridCell.Tab.0.right/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408790369" />
+    <state width="1280" height="397" key="GridCell.Tab.0.right/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408904872" />
     <state x="-1558" y="-37" key="NewPhpClassDialog" timestamp="1586309543731">
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
