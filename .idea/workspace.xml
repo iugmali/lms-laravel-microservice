@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="825cfca8-3c67-4180-8fcc-a3e253a01032" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.docker/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/entrypoint.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.docker/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/nginx/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.testing.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/BaseController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CastMemberController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/GenreController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/VideoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CastMemberResource.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CategoryResource.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/GenreResource.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/VideoResource.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CastMember.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Genre.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Traits/UploadFiles.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Traits/Uuid.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Video.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Rules/GenresHasCategoriesRule.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/hashing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/CastMemberFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/CategoryFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/GenreFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/VideoFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_23_204213_create_categories_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_24_054249_create_genres_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_26_213658_create_cast_members_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_26_214623_create_videos_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_26_185625_create_category_video_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_26_190020_create_genre_video_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_28_051405_create_category_genre_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CastMembersTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CategoriesTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/GenresTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/VideosTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/credentials/google/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/credentials/google/storage-admin.json.enc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Bootstrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Exceptions/TestException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/BaseControllerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/CastMemberControllerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/CategoryControllerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/GenreControllerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoController/BaseVideoControllerTestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoController/VideoControllerCrudTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoController/VideoControllerUploadsTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/CastMemberModelTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/CategoryModelTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/GenreModelTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/Traits/UploadFilesTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/Video/BaseVideoTestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/Video/VideoCrudTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Models/Video/VideoUploadTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Rules/GenresHasCategoriesRuleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Prod/Models/Traits/UploadFilesProdTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Stubs/Controllers/CategoryControllerStub.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Stubs/Controllers/GenreControllerStub.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Stubs/Models/CategoryStub.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Stubs/Models/GenreStub.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Stubs/Models/UploadFilesStub.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Stubs/Resources/CategoryResourceStub.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Stubs/Resources/GenreResourceStub.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Traits/TestProd.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Traits/TestResources.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Traits/TestSaves.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Traits/TestStorages.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Traits/TestUploads.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Traits/TestValidations.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/CastMemberUnitTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/CategoryUnitTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/GenreUnitTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/Traits/UploadFilesUnitTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/VideoUnitTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Rules/GenresHasCategoriesRuleUnitTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="iugmali/micro-videos-app:latest">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/superbalist/laravel-google-cloud-storage" />
+      <path value="$PROJECT_DIR$/vendor/superbalist/flysystem-google-storage" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/rize/uri-template" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-cached-adapter" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/google/crc32" />
+      <path value="$PROJECT_DIR$/vendor/google/cloud-storage" />
+      <path value="$PROJECT_DIR$/vendor/google/cloud-core" />
+      <path value="$PROJECT_DIR$/vendor/google/auth" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1PnUMUUxFhWI4ILeLA0XoFyPqfV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../centroin-adm" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\storage\credentials\google" />
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Feature\Models\Video" />
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Feature\Http\Controllers\Api\VideoController" />
+      <recent name="$PROJECT_DIR$/tests/Unit/Models" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Stubs\Resources" />
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\storage\faker\images" />
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\storage\faker\videos" />
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Prod\Models\Traits" />
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Unit\Models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Script.TestException.php">
+    <configuration name="BaseControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Api\BaseControllerTest" configuration_file="/opt/project/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/BaseControllerTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="VideoControllerCrudTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Api\VideoController\VideoControllerCrudTest" configuration_file="/opt/project/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoController/VideoControllerCrudTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="VideoControllerCrudTest.testIndex" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Api\VideoController\VideoControllerCrudTest" configuration_file="/opt/project/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoController/VideoControllerCrudTest.php" method="testIndex" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="VideoControllerUploadsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Api\VideoController\VideoControllerUploadsTest" configuration_file="/opt/project/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoController/VideoControllerUploadsTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestException.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/backend/tests/Exceptions/TestException.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.TestException.php" />
+        <item itemvalue="PHPUnit.VideoControllerUploadsTest" />
+        <item itemvalue="PHPUnit.VideoControllerCrudTest" />
+        <item itemvalue="PHPUnit.VideoControllerCrudTest.testIndex" />
+        <item itemvalue="PHPUnit.BaseControllerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="825cfca8-3c67-4180-8fcc-a3e253a01032" name="Default Changelist" comment="" />
+      <created>1566509305464</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566509305464</updated>
+      <workItem from="1566509306870" duration="2612000" />
+      <workItem from="1566575660942" duration="30371000" />
+      <workItem from="1566681320791" duration="12063000" />
+      <workItem from="1566781282458" duration="52000" />
+      <workItem from="1567094913726" duration="1379000" />
+      <workItem from="1567131068112" duration="1098000" />
+      <workItem from="1568067065269" duration="3263000" />
+      <workItem from="1569362149242" duration="307000" />
+      <workItem from="1569362471727" duration="13566000" />
+      <workItem from="1569469376667" duration="6378000" />
+      <workItem from="1569520254972" duration="11899000" />
+      <workItem from="1569606784814" duration="607000" />
+      <workItem from="1569635746848" duration="877000" />
+      <workItem from="1570132057700" duration="1242000" />
+      <workItem from="1571166077020" duration="1774000" />
+      <workItem from="1571284735362" duration="1241000" />
+      <workItem from="1572056583506" duration="657000" />
+      <workItem from="1575568124870" duration="2104000" />
+      <workItem from="1575591020686" duration="185000" />
+      <workItem from="1580225134189" duration="1534000" />
+      <workItem from="1580243245984" duration="738000" />
+      <workItem from="1581608840376" duration="13000" />
+      <workItem from="1581701306339" duration="674000" />
+      <workItem from="1584215265340" duration="6713000" />
+      <workItem from="1584244925130" duration="418000" />
+      <workItem from="1584245354640" duration="1199000" />
+      <workItem from="1584379761368" duration="11586000" />
+      <workItem from="1584466041366" duration="3270000" />
+      <workItem from="1584643146506" duration="1216000" />
+      <workItem from="1584937640335" duration="736000" />
+      <workItem from="1584987460917" duration="6586000" />
+      <workItem from="1585017101673" duration="5451000" />
+      <workItem from="1585024289798" duration="1213000" />
+      <workItem from="1585071146224" duration="11006000" />
+      <workItem from="1585185747547" duration="8484000" />
+      <workItem from="1585246388878" duration="13255000" />
+      <workItem from="1585281957831" duration="2778000" />
+      <workItem from="1585333207596" duration="6925000" />
+      <workItem from="1585368793221" duration="4449000" />
+      <workItem from="1585452150075" duration="8267000" />
+      <workItem from="1585538946304" duration="2199000" />
+      <workItem from="1585545393435" duration="4946000" />
+      <workItem from="1585589875374" duration="6679000" />
+      <workItem from="1585607317561" duration="7875000" />
+      <workItem from="1585633132182" duration="5414000" />
+      <workItem from="1585678961188" duration="615000" />
+      <workItem from="1585710925599" duration="9860000" />
+      <workItem from="1585721279588" duration="630000" />
+      <workItem from="1585723876038" duration="1192000" />
+      <workItem from="1585766575972" duration="4546000" />
+      <workItem from="1585801827660" duration="7076000" />
+      <workItem from="1585848767125" duration="5231000" />
+      <workItem from="1585869985572" duration="4211000" />
+      <workItem from="1585887426645" duration="10823000" />
+      <workItem from="1585935112485" duration="8685000" />
+      <workItem from="1586152791954" duration="7812000" />
+      <workItem from="1586204253859" duration="8572000" />
+      <workItem from="1586239858216" duration="6827000" />
+      <workItem from="1586279254758" duration="743000" />
+      <workItem from="1586295669531" duration="18771000" />
+      <workItem from="1586368182171" duration="1356000" />
+      <workItem from="1586403282436" duration="5394000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1596" y="-240" key="#BaseControllerTest.testIndex" timestamp="1586327258183">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1596" y="-240" key="#BaseControllerTest.testIndex/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586327258183" />
+    <state x="-1661" y="-143" width="840" height="691" key="#CLI_Interpreters" timestamp="1585812333403">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1661" y="-143" width="840" height="691" key="#CLI_Interpreters/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1585812333403" />
+    <state x="-1508" y="-119" key="#Docker" timestamp="1584387882747">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1508" y="-119" key="#Docker/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1584387882747" />
+    <state x="-1573" y="-296" key="#PHP" timestamp="1585810077616">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1573" y="-296" key="#PHP/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1585810077616" />
+    <state x="-2468" y="-299" width="2376" height="896" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1586403546421">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-2468" y="-299" width="2376" height="896" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586403546421" />
+    <state x="-1513" y="-49" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585898876176">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1513" y="-49" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1585898876176" />
+    <state x="-1475" y="-167" key="#com.intellij.ide.util.MemberChooser" timestamp="1585594725105">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1475" y="-167" key="#com.intellij.ide.util.MemberChooser/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1585594725105" />
+    <state x="-1669" y="-391" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585720268424">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1669" y="-391" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1585720268424" />
+    <state x="-1782" y="0" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584245517161">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1782" y="0" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1584245517161" />
+    <state x="-1550" y="-97" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586323173476">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1550" y="-97" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586323173476" />
+    <state x="-1500" y="-97" key="FileChooserDialogImpl" timestamp="1586368246699">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1500" y="-97" key="FileChooserDialogImpl/0.0.1298.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1581701350247" />
+    <state x="-1500" y="-97" key="FileChooserDialogImpl/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586368246699" />
+    <state width="1280" height="397" key="GridCell.Tab.0.bottom" timestamp="1586408790369">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state width="1280" height="397" key="GridCell.Tab.0.bottom/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408790369" />
+    <state width="1280" height="397" key="GridCell.Tab.0.center" timestamp="1586408790369">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state width="1280" height="397" key="GridCell.Tab.0.center/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408790369" />
+    <state width="1280" height="397" key="GridCell.Tab.0.left" timestamp="1586408790369">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state width="1280" height="397" key="GridCell.Tab.0.left/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408790369" />
+    <state width="1280" height="397" key="GridCell.Tab.0.right" timestamp="1586408790369">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state width="1280" height="397" key="GridCell.Tab.0.right/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408790369" />
+    <state x="-1558" y="-37" key="NewPhpClassDialog" timestamp="1586309543731">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1558" y="-37" key="NewPhpClassDialog/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586309543731" />
+    <state x="-1446" y="72" key="NewPhpFileDialog" timestamp="1585608117624">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1446" y="72" key="NewPhpFileDialog/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1585608117624" />
+    <state x="-1862" y="-117" width="1302" height="716" key="SettingsEditor" timestamp="1586408873082">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1862" y="-117" width="1302" height="716" key="SettingsEditor/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586408873082" />
+    <state x="-1568" y="-237" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585936303444">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1568" y="-237" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1585936303444" />
+    <state x="-1180" y="-101" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1585811731487">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1180" y="-101" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1585811731487" />
+    <state x="-1584" y="-253" width="737" height="804" key="find.popup" timestamp="1585717665024">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1584" y="-253" width="737" height="804" key="find.popup/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1585717665024" />
+    <state x="-1617" y="-156" width="672" height="678" key="search.everywhere.popup" timestamp="1586406745621">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1617" y="-156" width="672" height="678" key="search.everywhere.popup/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586406745621" />
+    <state x="-1558" y="60" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585283443944">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1558" y="60" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1585283443944" />
+  </component>
+</project>

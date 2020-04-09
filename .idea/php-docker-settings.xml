@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpDockerContainerSettings">
+    <list>
+      <map>
+        <entry key="6b36c836-f75b-464d-b1ca-4f6530b8f2e1">
+          <value>
+            <DockerContainerSettings>
+              <option name="links">
+                <list>
+                  <DockerLinkImpl>
+                    <option name="alias" value="db" />
+                    <option name="name" value="micro-videos-db" />
+                  </DockerLinkImpl>
+                </list>
+              </option>
+              <option name="networkMode" value="app-network" />
+              <option name="version" value="1" />
+              <option name="volumeBindings">
+                <list>
+                  <DockerVolumeBindingImpl>
+                    <option name="containerPath" value="/opt/project" />
+                    <option name="hostPath" value="$PROJECT_DIR$" />
+                  </DockerVolumeBindingImpl>
+                </list>
+              </option>
+            </DockerContainerSettings>
+          </value>
+        </entry>
+      </map>
+    </list>
+  </component>
+</project>
