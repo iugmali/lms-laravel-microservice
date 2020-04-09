@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="825cfca8-3c67-4180-8fcc-a3e253a01032" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,17 +189,13 @@
       <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Unit\Models" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.BaseControllerTest (1)">
+  <component name="RunManager" selected="PHPUnit.tests">
     <configuration name="BaseControllerTest (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\Http\Controllers\Api\BaseControllerTest" configuration_file="/opt/project/backend/phpunit.xml" file="$PROJECT_DIR$/backend/tests/Feature/Http/Controllers/Api/BaseControllerTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="VideoControllerCrudTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\Http\Controllers\Api\VideoController\VideoControllerCrudTest" configuration_file="/opt/project/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoController/VideoControllerCrudTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="VideoControllerCrudTest.testIndex" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Http\Controllers\Api\VideoController\VideoControllerCrudTest" configuration_file="/opt/project/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoController/VideoControllerCrudTest.php" method="testIndex" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="VideoControllerUploadsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -210,16 +206,20 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="/opt/project/backend/phpunit.xml" directory="$PROJECT_DIR$/backend/tests" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestException.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/backend/tests/Exceptions/TestException.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.tests" />
         <item itemvalue="PHPUnit.BaseControllerTest (1)" />
         <item itemvalue="PHP Script.TestException.php" />
         <item itemvalue="PHPUnit.VideoControllerUploadsTest" />
         <item itemvalue="PHPUnit.VideoControllerCrudTest" />
-        <item itemvalue="PHPUnit.VideoControllerCrudTest.testIndex" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +310,7 @@
       <workItem from="1586279254758" duration="743000" />
       <workItem from="1586295669531" duration="18771000" />
       <workItem from="1586368182171" duration="1356000" />
-      <workItem from="1586403282436" duration="5705000" />
+      <workItem from="1586403282436" duration="6100000" />
     </task>
     <servers />
   </component>
