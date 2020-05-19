@@ -189,7 +189,6 @@ class GenreControllerTest extends TestCase
         $genreClass = Genre::find($this->getIdFromResponse($response));
         $resource = new GenreResource($genreClass);
 
-        dump($resource);
         $this->assertResource($response, $resource);
 
     }

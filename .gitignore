@@ -1,1 +1,4 @@
 .docker/dbdata/
+.idea/
+.vscode/
+.npm-cache/
