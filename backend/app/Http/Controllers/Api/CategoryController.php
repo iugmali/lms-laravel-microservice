@@ -12,8 +12,7 @@ class CategoryController extends BaseController
     private $validation_rules = [
         'name' => 'required|max:255',
         'description' => 'nullable',
-        'is_active' => 'boolean',
-        'genres_id' => 'required|array|exists:genres,id,deleted_at,NULL'
+        'is_active' => 'boolean'
     ];
 
     public function store(Request $request)

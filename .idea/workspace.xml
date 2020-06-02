@@ -2,15 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="825cfca8-3c67-4180-8fcc-a3e253a01032" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.docker/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-microservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-microservice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/config/cors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Breadcrumbs.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Navbar/Menu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Navbar/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/cast-member/Form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/cast-member/PageForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/cast-member/PageList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/cast-member/Table.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/category/Form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/category/PageForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/category/PageList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/category/Table.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/genre/Form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/genre/PageForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/genre/PageList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/genre/Table.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/routes/AppRouter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/routes/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/theme.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/typings/material-ui.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/util/http/cast-member-http.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/util/http/category-http.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/util/http/genre-http.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/util/http/http-resource.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/util/http/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/tests/Feature/Http/Controllers/Api/GenreControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tests/Feature/Http/Controllers/Api/GenreControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/static/logo.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +67,15 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -190,22 +232,22 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\iugma\projects-A\laravel-microservice\storage\credentials\google" />
-      <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Feature\Models\Video" />
-      <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Feature\Http\Controllers\Api\VideoController" />
-      <recent name="$PROJECT_DIR$/tests/Unit/Models" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/api" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\frontend\src\pages\cast-member" />
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\frontend\src\pages\genre" />
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\frontend\src\pages\castmember" />
       <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Stubs\Resources" />
       <recent name="C:\Users\iugma\projects-A\laravel-microservice\storage\faker\images" />
-      <recent name="C:\Users\iugma\projects-A\laravel-microservice\storage\faker\videos" />
-      <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Prod\Models\Traits" />
-      <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Unit\Models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\frontend\src\static" />
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\frontend\src\components\Navbar" />
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\frontend\src" />
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\storage\credentials\google" />
+      <recent name="C:\Users\iugma\projects-A\laravel-microservice\tests\Feature\Models\Video" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.tests">
@@ -321,7 +363,18 @@
       <workItem from="1586473025456" duration="111000" />
       <workItem from="1589557362232" duration="25000" />
       <workItem from="1589855462574" duration="5417000" />
-      <workItem from="1589903155525" duration="3333000" />
+      <workItem from="1589903155525" duration="4400000" />
+      <workItem from="1589922547995" duration="3318000" />
+      <workItem from="1589939163831" duration="7906000" />
+      <workItem from="1589986740678" duration="9489000" />
+      <workItem from="1590412185980" duration="22182000" />
+      <workItem from="1590456771954" duration="4983000" />
+      <workItem from="1590501711043" duration="18754000" />
+      <workItem from="1590524740493" duration="47000" />
+      <workItem from="1590586556427" duration="2958000" />
+      <workItem from="1590615452524" duration="148000" />
+      <workItem from="1590683620553" duration="6930000" />
+      <workItem from="1590759061053" duration="2337000" />
     </task>
     <servers />
   </component>
@@ -384,12 +437,11 @@
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
     <state x="-1550" y="-97" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586323173476" />
-    <state x="-1500" y="-97" key="FileChooserDialogImpl" timestamp="1589903174799">
+    <state x="-1500" y="-97" key="FileChooserDialogImpl" timestamp="1590689266614">
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
-    <state x="-1500" y="-97" key="FileChooserDialogImpl/0.0.1298.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1581701350247" />
     <state x="-1500" y="-97" key="FileChooserDialogImpl/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586456620657" />
-    <state x="-1500" y="-97" key="FileChooserDialogImpl/0.0.1304.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1589903174799" />
+    <state x="-1500" y="-97" key="FileChooserDialogImpl/0.0.1304.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1590689266614" />
     <state width="2561" height="397" key="GridCell.Tab.0.bottom" timestamp="1589861573515">
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
@@ -418,10 +470,11 @@
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
     <state x="-1446" y="72" key="NewPhpFileDialog/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1585608117624" />
-    <state x="-1862" y="-117" width="1302" height="716" key="SettingsEditor" timestamp="1586473134612">
+    <state x="-1862" y="-117" width="1302" height="716" key="SettingsEditor" timestamp="1590615508429">
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
     <state x="-1862" y="-117" width="1302" height="716" key="SettingsEditor/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586473134612" />
+    <state x="-1862" y="-117" key="SettingsEditor/0.0.1304.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1590615508429" />
     <state x="-1568" y="-237" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585936303444">
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
@@ -438,10 +491,15 @@
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
     <state x="-1494" y="49" key="jetbrains.nodejs.interpreters-dialog/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586414626265" />
-    <state x="-1617" y="-156" width="672" height="678" key="search.everywhere.popup" timestamp="1586406745621">
+    <state x="-1624" y="55" key="run.anything.popup" timestamp="1590424095930">
+      <screen x="-2560" y="-391" width="2560" height="1080" />
+    </state>
+    <state x="-1624" y="55" key="run.anything.popup/0.0.1304.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1590424095930" />
+    <state x="-1617" y="-156" width="672" height="678" key="search.everywhere.popup" timestamp="1590687639631">
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
     <state x="-1617" y="-156" width="672" height="678" key="search.everywhere.popup/0.0.1303.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1586406745621" />
+    <state x="-1617" y="-156" width="672" height="678" key="search.everywhere.popup/0.0.1304.768/-2560.-391.2560.1080@-2560.-391.2560.1080" timestamp="1590687639631" />
     <state x="-1558" y="60" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1589911226319">
       <screen x="-2560" y="-391" width="2560" height="1080" />
     </state>
